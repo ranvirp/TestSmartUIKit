@@ -1,0 +1,47 @@
+PODS:
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - SketchToUIKit (1.1.0):
+    - Kingfisher (~> 5.0)
+    - SnapKit
+    - SQLite.swift (~> 0.12.0)
+  - SmartUIKit (1.1.0):
+    - Kingfisher (~> 5.0)
+    - SnapKit
+    - SQLite.swift (~> 0.12.0)
+  - SnapKit (5.0.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+
+DEPENDENCIES:
+  - SketchToUIKit (from `https://github.com/ranvirp/SketchToUIKit-Pod`)
+  - SmartUIKit
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - SmartUIKit
+    - SnapKit
+    - SQLite.swift
+
+EXTERNAL SOURCES:
+  SketchToUIKit:
+    :git: https://github.com/ranvirp/SketchToUIKit-Pod
+
+CHECKOUT OPTIONS:
+  SketchToUIKit:
+    :commit: 0e6171b131eb113386893c952722bae51f364bab
+    :git: https://github.com/ranvirp/SketchToUIKit-Pod
+
+SPEC CHECKSUMS:
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  SketchToUIKit: dc033d0aa358ae7e9739f6e036e0db5ad386cb32
+  SmartUIKit: bd0f90e4663bf08258d54f32fcfd07ccba3b676c
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+
+PODFILE CHECKSUM: 3d73adfbdcf3d4167009b7e6941b3bce2c6043f4
+
+COCOAPODS: 1.10.0

@@ -1,0 +1,4 @@
+framework module SketchToUIKit {
+  header "SketchToUIKit-Swift.h"
+  requires objc
+}

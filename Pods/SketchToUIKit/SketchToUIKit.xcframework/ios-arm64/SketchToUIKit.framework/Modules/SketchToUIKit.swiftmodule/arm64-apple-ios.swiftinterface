@@ -1,0 +1,716 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SketchToUIKit
+import CoreGraphics
+import Foundation
+import SmartUIKit
+import Swift
+import UIKit
+extension SketchLayer {
+  public func toView(refFrame: SketchToUIKit.CRect, superView: UIKit.UIView) -> UIKit.UIView?
+}
+extension SketchStyle {
+  public func apply(on view: UIKit.UIView)
+}
+extension SketchPage {
+  public func getArtboard(name: Swift.String?) -> [SketchToUIKit.SketchLayer]
+}
+public enum SketchFileRefClass : Swift.String {
+  case MSImageData
+  case MSImmutablePage
+  case MSPatch
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SketchDocument {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchFileRef {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchPage {
+  public var name: Swift.String
+  public var layers: [SketchToUIKit.SketchLayer]
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchForeignLayerStyle {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchForeignSymbol {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchSymbolMaster {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchLayer {
+  public var _class: Swift.String
+  public var name: Swift.String
+  public var frame: SketchToUIKit.CRect
+  public var isVisible: Swift.Bool
+  public var layers: [SketchToUIKit.SketchLayer]?
+  public var attributedString: SketchToUIKit.SketchAttributedString?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchLayerOrSymbol {
+  public var _class: Swift.String?
+  public var name: Swift.String?
+  public var frame: SketchToUIKit.CRect?
+  public var isVisible: Swift.Bool?
+  public var layers: [SketchToUIKit.SketchLayer]?
+  public var attributedString: SketchToUIKit.SketchAttributedString?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchRulerData {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchAttributedString {
+  public var string: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchSymbolInstance {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchDataFileRef {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchData {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchShaData {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchAbstractGroup {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SketchGradientType : Swift.Int {
+  case Linear
+  case Radial
+  case Angular
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct SketchGradientStop {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchGradient {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchShadow {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SketchArrowhead : Swift.Int {
+  case None
+  case OpenArrow
+  case FilledArrow
+  case Line
+  case OpenCircle
+  case FilledCircle
+  case OpenSquare
+  case FilledSquare
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchLineEnd : Swift.Int {
+  case butt
+  case round
+  case square
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchLineJoin : Swift.Int {
+  case Miter
+  case Round
+  case Bivel
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct SketchColorAsset {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchGradientAsset {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SketchTextLineSpacing : Swift.Int {
+  case constantBaseLine
+  case variable
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchLineSpacingBehaviour : Swift.Int {
+  case None
+  case Legacy
+  case Consistentbaseline
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct SkectchTextTransform {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchText {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SketchBorderPosition : Swift.Int {
+  case Center
+  case Inside
+  case Outside
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct SketchBorderOptions {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchColor {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchBorder {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchBlurOld {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchContextSettings {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchLayerStyle {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchTextStyle {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchStringAttribute {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchStringAttributeAttributes {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchFontAttribute {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchFont {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchParagraphStyle {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchColorControl {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchStyle {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchSharedStyleContainer {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchSharedStyle {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchStyleOld {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SketchTextAlignment : Swift.Int {
+  case left
+  case right
+  case center
+  case justify
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchTextStyleVerticalAlignment : Swift.Int {
+  case Top
+  case Middle
+  case Bottom
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchVerticalAlignment : Swift.Int {
+  case top
+  case center
+  case bottom
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchFillType : Swift.Int {
+  case Color
+  case Gradient
+  case Pattern
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchPatternFillType : Swift.Int {
+  case Tile
+  case Fill
+  case Stretch
+  case Fit
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct SketchNSImage {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchNSData {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ImageData {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchPattern {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchFill {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchBlur {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SketchBlurType : Swift.Int {
+  case Gaussian
+  case Motion
+  case Zoom
+  case Background
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct CRect {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SketchCurvePoint {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SketchCurveMode : Swift.Int {
+  case None
+  case Straight
+  case Mirrored
+  case Asymmetric
+  case Disconnected
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchTextTransformAttribute : Swift.Int {
+  case None
+  case Uppercase
+  case Lowercase
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchBlendMode : Swift.Int {
+  case Normal
+  case Darken
+  case Multiply
+  case Colorburn
+  case Lighten
+  case Screen
+  case Colordodge
+  case Overlay
+  case Softlight
+  case Hardlight
+  case Difference
+  case Exclusion
+  case Hue
+  case Saturation
+  case Color
+  case Luminosity
+  case Plusdarker
+  case Pluslighter
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchUnderlineStyle : Swift.Int {
+  case None
+  case Underlined
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+public enum SketchStrikethroughStyle : Swift.Int {
+  case None
+  case Strikethrough
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+public enum SketchMarkerType : Swift.Int {
+  case OpenArrow
+  case FilledArrow
+  case Line
+  case OpenCircle
+  case FilledCircle
+  case OpenSquare
+  case FilledSquare
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchWindingRule : Swift.Int {
+  case nonZero
+  case evenOdd
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchBooleanOperation : Swift.Int {
+  case None
+  case Union
+  case Subtract
+  case Intersection
+  case Difference
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchPointsRadiusBehaviour : Swift.Int {
+  case Disabled
+  case Legacy
+  case Rounded
+  case Smooth
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SketchRefClassEnum : Swift.String {
+  case MSImageData
+  case MSFontData
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SketchTextBehaviour : Swift.Int {
+  case Flexible
+  case Fixed
+  case FixedWidthAndHeight
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension SketchToUIKit.SketchLayer : Swift.Encodable {}
+extension SketchToUIKit.SketchLayer : Swift.Decodable {}
+extension SketchToUIKit.SketchBorder : Swift.Encodable {}
+extension SketchToUIKit.SketchBorder : Swift.Decodable {}
+extension SketchToUIKit.SketchStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchAttributedString : Swift.Encodable {}
+extension SketchToUIKit.SketchAttributedString : Swift.Decodable {}
+extension SketchToUIKit.SketchStringAttributeAttributes : Swift.Encodable {}
+extension SketchToUIKit.SketchStringAttributeAttributes : Swift.Decodable {}
+extension SketchToUIKit.SketchPage : Swift.Encodable {}
+extension SketchToUIKit.SketchPage : Swift.Decodable {}
+extension SketchToUIKit.SketchFileRefClass : Swift.Encodable {}
+extension SketchToUIKit.SketchFileRefClass : Swift.Decodable {}
+extension SketchToUIKit.SketchFileRefClass : Swift.Equatable {}
+extension SketchToUIKit.SketchFileRefClass : Swift.Hashable {}
+extension SketchToUIKit.SketchFileRefClass : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchDocument : Swift.Encodable {}
+extension SketchToUIKit.SketchDocument : Swift.Decodable {}
+extension SketchToUIKit.SketchFileRef : Swift.Encodable {}
+extension SketchToUIKit.SketchFileRef : Swift.Decodable {}
+extension SketchToUIKit.SketchForeignLayerStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchForeignLayerStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchForeignSymbol : Swift.Encodable {}
+extension SketchToUIKit.SketchForeignSymbol : Swift.Decodable {}
+extension SketchToUIKit.SketchSymbolMaster : Swift.Encodable {}
+extension SketchToUIKit.SketchSymbolMaster : Swift.Decodable {}
+extension SketchToUIKit.SketchLayerOrSymbol : Swift.Encodable {}
+extension SketchToUIKit.SketchLayerOrSymbol : Swift.Decodable {}
+extension SketchToUIKit.SketchRulerData : Swift.Encodable {}
+extension SketchToUIKit.SketchRulerData : Swift.Decodable {}
+extension SketchToUIKit.SketchSymbolInstance : Swift.Encodable {}
+extension SketchToUIKit.SketchSymbolInstance : Swift.Decodable {}
+extension SketchToUIKit.SketchDataFileRef : Swift.Encodable {}
+extension SketchToUIKit.SketchDataFileRef : Swift.Decodable {}
+extension SketchToUIKit.SketchData : Swift.Encodable {}
+extension SketchToUIKit.SketchData : Swift.Decodable {}
+extension SketchToUIKit.SketchShaData : Swift.Encodable {}
+extension SketchToUIKit.SketchShaData : Swift.Decodable {}
+extension SketchToUIKit.SketchAbstractGroup : Swift.Encodable {}
+extension SketchToUIKit.SketchAbstractGroup : Swift.Decodable {}
+extension SketchToUIKit.SketchGradientType : Swift.Encodable {}
+extension SketchToUIKit.SketchGradientType : Swift.Decodable {}
+extension SketchToUIKit.SketchGradientType : Swift.Equatable {}
+extension SketchToUIKit.SketchGradientType : Swift.Hashable {}
+extension SketchToUIKit.SketchGradientType : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchGradientStop : Swift.Encodable {}
+extension SketchToUIKit.SketchGradientStop : Swift.Decodable {}
+extension SketchToUIKit.SketchGradient : Swift.Encodable {}
+extension SketchToUIKit.SketchGradient : Swift.Decodable {}
+extension SketchToUIKit.SketchShadow : Swift.Encodable {}
+extension SketchToUIKit.SketchShadow : Swift.Decodable {}
+extension SketchToUIKit.SketchArrowhead : Swift.Encodable {}
+extension SketchToUIKit.SketchArrowhead : Swift.Decodable {}
+extension SketchToUIKit.SketchArrowhead : Swift.Equatable {}
+extension SketchToUIKit.SketchArrowhead : Swift.Hashable {}
+extension SketchToUIKit.SketchArrowhead : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchLineEnd : Swift.Encodable {}
+extension SketchToUIKit.SketchLineEnd : Swift.Decodable {}
+extension SketchToUIKit.SketchLineEnd : Swift.Equatable {}
+extension SketchToUIKit.SketchLineEnd : Swift.Hashable {}
+extension SketchToUIKit.SketchLineEnd : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchLineJoin : Swift.Encodable {}
+extension SketchToUIKit.SketchLineJoin : Swift.Decodable {}
+extension SketchToUIKit.SketchLineJoin : Swift.Equatable {}
+extension SketchToUIKit.SketchLineJoin : Swift.Hashable {}
+extension SketchToUIKit.SketchLineJoin : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchColorAsset : Swift.Encodable {}
+extension SketchToUIKit.SketchColorAsset : Swift.Decodable {}
+extension SketchToUIKit.SketchGradientAsset : Swift.Encodable {}
+extension SketchToUIKit.SketchGradientAsset : Swift.Decodable {}
+extension SketchToUIKit.SketchTextLineSpacing : Swift.Encodable {}
+extension SketchToUIKit.SketchTextLineSpacing : Swift.Decodable {}
+extension SketchToUIKit.SketchTextLineSpacing : Swift.Equatable {}
+extension SketchToUIKit.SketchTextLineSpacing : Swift.Hashable {}
+extension SketchToUIKit.SketchTextLineSpacing : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchLineSpacingBehaviour : Swift.Encodable {}
+extension SketchToUIKit.SketchLineSpacingBehaviour : Swift.Decodable {}
+extension SketchToUIKit.SketchLineSpacingBehaviour : Swift.Equatable {}
+extension SketchToUIKit.SketchLineSpacingBehaviour : Swift.Hashable {}
+extension SketchToUIKit.SketchLineSpacingBehaviour : Swift.RawRepresentable {}
+extension SketchToUIKit.SkectchTextTransform : Swift.Encodable {}
+extension SketchToUIKit.SkectchTextTransform : Swift.Decodable {}
+extension SketchToUIKit.SketchText : Swift.Encodable {}
+extension SketchToUIKit.SketchText : Swift.Decodable {}
+extension SketchToUIKit.SketchBorderPosition : Swift.Encodable {}
+extension SketchToUIKit.SketchBorderPosition : Swift.Decodable {}
+extension SketchToUIKit.SketchBorderPosition : Swift.Equatable {}
+extension SketchToUIKit.SketchBorderPosition : Swift.Hashable {}
+extension SketchToUIKit.SketchBorderPosition : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchBorderOptions : Swift.Encodable {}
+extension SketchToUIKit.SketchBorderOptions : Swift.Decodable {}
+extension SketchToUIKit.SketchColor : Swift.Encodable {}
+extension SketchToUIKit.SketchColor : Swift.Decodable {}
+extension SketchToUIKit.SketchBlurOld : Swift.Encodable {}
+extension SketchToUIKit.SketchBlurOld : Swift.Decodable {}
+extension SketchToUIKit.SketchContextSettings : Swift.Encodable {}
+extension SketchToUIKit.SketchContextSettings : Swift.Decodable {}
+extension SketchToUIKit.SketchLayerStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchLayerStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchTextStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchTextStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchStringAttribute : Swift.Encodable {}
+extension SketchToUIKit.SketchStringAttribute : Swift.Decodable {}
+extension SketchToUIKit.SketchFontAttribute : Swift.Encodable {}
+extension SketchToUIKit.SketchFontAttribute : Swift.Decodable {}
+extension SketchToUIKit.SketchFont : Swift.Encodable {}
+extension SketchToUIKit.SketchFont : Swift.Decodable {}
+extension SketchToUIKit.SketchParagraphStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchParagraphStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchColorControl : Swift.Encodable {}
+extension SketchToUIKit.SketchColorControl : Swift.Decodable {}
+extension SketchToUIKit.SketchSharedStyleContainer : Swift.Encodable {}
+extension SketchToUIKit.SketchSharedStyleContainer : Swift.Decodable {}
+extension SketchToUIKit.SketchSharedStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchSharedStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchStyleOld : Swift.Encodable {}
+extension SketchToUIKit.SketchStyleOld : Swift.Decodable {}
+extension SketchToUIKit.SketchTextAlignment : Swift.Encodable {}
+extension SketchToUIKit.SketchTextAlignment : Swift.Decodable {}
+extension SketchToUIKit.SketchTextAlignment : Swift.Equatable {}
+extension SketchToUIKit.SketchTextAlignment : Swift.Hashable {}
+extension SketchToUIKit.SketchTextAlignment : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchTextStyleVerticalAlignment : Swift.Encodable {}
+extension SketchToUIKit.SketchTextStyleVerticalAlignment : Swift.Decodable {}
+extension SketchToUIKit.SketchTextStyleVerticalAlignment : Swift.Equatable {}
+extension SketchToUIKit.SketchTextStyleVerticalAlignment : Swift.Hashable {}
+extension SketchToUIKit.SketchTextStyleVerticalAlignment : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchVerticalAlignment : Swift.Encodable {}
+extension SketchToUIKit.SketchVerticalAlignment : Swift.Decodable {}
+extension SketchToUIKit.SketchVerticalAlignment : Swift.Equatable {}
+extension SketchToUIKit.SketchVerticalAlignment : Swift.Hashable {}
+extension SketchToUIKit.SketchVerticalAlignment : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchFillType : Swift.Encodable {}
+extension SketchToUIKit.SketchFillType : Swift.Decodable {}
+extension SketchToUIKit.SketchFillType : Swift.Equatable {}
+extension SketchToUIKit.SketchFillType : Swift.Hashable {}
+extension SketchToUIKit.SketchFillType : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchPatternFillType : Swift.Encodable {}
+extension SketchToUIKit.SketchPatternFillType : Swift.Decodable {}
+extension SketchToUIKit.SketchPatternFillType : Swift.Equatable {}
+extension SketchToUIKit.SketchPatternFillType : Swift.Hashable {}
+extension SketchToUIKit.SketchPatternFillType : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchNSImage : Swift.Encodable {}
+extension SketchToUIKit.SketchNSImage : Swift.Decodable {}
+extension SketchToUIKit.SketchNSData : Swift.Encodable {}
+extension SketchToUIKit.SketchNSData : Swift.Decodable {}
+extension SketchToUIKit.ImageData : Swift.Encodable {}
+extension SketchToUIKit.ImageData : Swift.Decodable {}
+extension SketchToUIKit.SketchPattern : Swift.Encodable {}
+extension SketchToUIKit.SketchPattern : Swift.Decodable {}
+extension SketchToUIKit.SketchFill : Swift.Encodable {}
+extension SketchToUIKit.SketchFill : Swift.Decodable {}
+extension SketchToUIKit.SketchBlur : Swift.Encodable {}
+extension SketchToUIKit.SketchBlur : Swift.Decodable {}
+extension SketchToUIKit.SketchBlurType : Swift.Encodable {}
+extension SketchToUIKit.SketchBlurType : Swift.Decodable {}
+extension SketchToUIKit.SketchBlurType : Swift.Equatable {}
+extension SketchToUIKit.SketchBlurType : Swift.Hashable {}
+extension SketchToUIKit.SketchBlurType : Swift.RawRepresentable {}
+extension SketchToUIKit.CRect : Swift.Encodable {}
+extension SketchToUIKit.CRect : Swift.Decodable {}
+extension SketchToUIKit.SketchCurvePoint : Swift.Encodable {}
+extension SketchToUIKit.SketchCurvePoint : Swift.Decodable {}
+extension SketchToUIKit.SketchCurveMode : Swift.Encodable {}
+extension SketchToUIKit.SketchCurveMode : Swift.Decodable {}
+extension SketchToUIKit.SketchCurveMode : Swift.Equatable {}
+extension SketchToUIKit.SketchCurveMode : Swift.Hashable {}
+extension SketchToUIKit.SketchCurveMode : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchTextTransformAttribute : Swift.Encodable {}
+extension SketchToUIKit.SketchTextTransformAttribute : Swift.Decodable {}
+extension SketchToUIKit.SketchTextTransformAttribute : Swift.Equatable {}
+extension SketchToUIKit.SketchTextTransformAttribute : Swift.Hashable {}
+extension SketchToUIKit.SketchTextTransformAttribute : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchBlendMode : Swift.Encodable {}
+extension SketchToUIKit.SketchBlendMode : Swift.Decodable {}
+extension SketchToUIKit.SketchBlendMode : Swift.Equatable {}
+extension SketchToUIKit.SketchBlendMode : Swift.Hashable {}
+extension SketchToUIKit.SketchBlendMode : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchUnderlineStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchUnderlineStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchUnderlineStyle : Swift.Equatable {}
+extension SketchToUIKit.SketchUnderlineStyle : Swift.Hashable {}
+extension SketchToUIKit.SketchUnderlineStyle : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchStrikethroughStyle : Swift.Encodable {}
+extension SketchToUIKit.SketchStrikethroughStyle : Swift.Decodable {}
+extension SketchToUIKit.SketchStrikethroughStyle : Swift.Equatable {}
+extension SketchToUIKit.SketchStrikethroughStyle : Swift.Hashable {}
+extension SketchToUIKit.SketchStrikethroughStyle : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchMarkerType : Swift.Encodable {}
+extension SketchToUIKit.SketchMarkerType : Swift.Decodable {}
+extension SketchToUIKit.SketchMarkerType : Swift.Equatable {}
+extension SketchToUIKit.SketchMarkerType : Swift.Hashable {}
+extension SketchToUIKit.SketchMarkerType : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchWindingRule : Swift.Encodable {}
+extension SketchToUIKit.SketchWindingRule : Swift.Decodable {}
+extension SketchToUIKit.SketchWindingRule : Swift.Equatable {}
+extension SketchToUIKit.SketchWindingRule : Swift.Hashable {}
+extension SketchToUIKit.SketchWindingRule : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchBooleanOperation : Swift.Encodable {}
+extension SketchToUIKit.SketchBooleanOperation : Swift.Decodable {}
+extension SketchToUIKit.SketchBooleanOperation : Swift.Equatable {}
+extension SketchToUIKit.SketchBooleanOperation : Swift.Hashable {}
+extension SketchToUIKit.SketchBooleanOperation : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchPointsRadiusBehaviour : Swift.Encodable {}
+extension SketchToUIKit.SketchPointsRadiusBehaviour : Swift.Decodable {}
+extension SketchToUIKit.SketchPointsRadiusBehaviour : Swift.Equatable {}
+extension SketchToUIKit.SketchPointsRadiusBehaviour : Swift.Hashable {}
+extension SketchToUIKit.SketchPointsRadiusBehaviour : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchRefClassEnum : Swift.Encodable {}
+extension SketchToUIKit.SketchRefClassEnum : Swift.Decodable {}
+extension SketchToUIKit.SketchRefClassEnum : Swift.Equatable {}
+extension SketchToUIKit.SketchRefClassEnum : Swift.Hashable {}
+extension SketchToUIKit.SketchRefClassEnum : Swift.RawRepresentable {}
+extension SketchToUIKit.SketchTextBehaviour : Swift.Encodable {}
+extension SketchToUIKit.SketchTextBehaviour : Swift.Decodable {}
+extension SketchToUIKit.SketchTextBehaviour : Swift.Equatable {}
+extension SketchToUIKit.SketchTextBehaviour : Swift.Hashable {}
+extension SketchToUIKit.SketchTextBehaviour : Swift.RawRepresentable {}

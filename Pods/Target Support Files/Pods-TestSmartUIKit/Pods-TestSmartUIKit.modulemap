@@ -1,0 +1,6 @@
+framework module Pods_TestSmartUIKit {
+  umbrella header "Pods-TestSmartUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
